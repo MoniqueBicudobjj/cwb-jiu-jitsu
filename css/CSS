@@ -1,0 +1,422 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  transition: 0.5s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background: linear-gradient(to right, #22d868, #40cfff);
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links li a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #000;
+  transform: scale(1.05);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.banner {
+  background: linear-gradient(135deg, #d6f5e3, #e6faff);
+  text-align: center;
+  padding: 80px 20px;
+  color: #26583a;
+}
+
+.banner h1 {
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+}
+
+.banner p {
+  font-size: 1.4rem;
+}
+
+.cards,
+.cursos-container,
+.professores-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.card,
+.curso-card,
+.professor-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+}
+
+.card:hover,
+.curso-card:hover,
+.professor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.professor-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.curso-card i {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: #22d868;
+}
+
+.cards h3,
+.curso-card h3,
+.professor-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.cards p,
+.curso-card p,
+.professor-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.eventos {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.eventos h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #22d868;
+}
+
+.event-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
+
+.event-card img {
+  width: 120px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+  padding: 5px;
+  flex-shrink: 0;
+}
+
+.event-info h2 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.event-info p {
+  margin: 3px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.ranking-tabela {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.ranking-tabela table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ranking-tabela th,
+.ranking-tabela td {
+  padding: 12px 15px;
+}
+
+.ranking-tabela thead {
+  background: #22d868;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.ranking-tabela tr:nth-child(even) {
+  background: #f4f4f9;
+}
+
+.ranking-tabela tr.ouro {
+  background: #ffd7004d;
+}
+
+.ranking-tabela tr.prata {
+  background: #c0c0c04d;
+}
+
+.ranking-tabela tr.bronze {
+  background: #cd7f324d;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(70, 30, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 25%;
+  margin: auto;
+  margin-top: 10%;
+  padding: 20px 30px;
+  transition: 0.5s;
+}
+
+@media only screen and (max-width: 768px) {
+  .login-box {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .login-box {
+    width: 40%;
+  }
+}
+
+.login-box h1 {
+  text-align: center;
+  color: #232c3d;
+  transition: 0.5s;
+}
+
+body.dark-mode .login-box {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .login-box h1 {
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+input {
+  width: 80%;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #f0f5ff;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+  transition: 0.5s;
+}
+
+body.dark-mode input {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
+
+input:focus {
+  outline: none;
+}
+
+form button {
+  width: 40%;
+  border: none;
+  background-color: #63c4ff;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  transition: 0.5s;
+}
+
+
+form button:hover {
+  cursor: pointer;
+  background-color: #43a0da;
+}
+
+form button:focus {
+  outline: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 48%;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.5s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.switch input:checked + .slider {
+  background-color: #794bc4;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    width: 220px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 12px 0;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .event-card,
+  .professor-card,
+  .curso-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .event-card img {
+    margin-bottom: 10px;
+  }
+
+  .professor-card img {
+    margin-bottom: 10px;
+  }
+}
