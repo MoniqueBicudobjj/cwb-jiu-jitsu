@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos & Professores - BJJ CWB</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">🥋 BJJ CWB</div>
+     <ul class="nav-links">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Início</a></li>
+        <li><a href="campeoeseranking.html" class="active"><i class="fa-solid fa-trophy"></i> Campeões & Ranking</a></li>
+        <li><a href="cursoseprofessores.html"><i class="fa-solid fa-user-graduate"></i> Cursos e Professores</a></li>
+        <li><a href="eventos.html"><i class="fa-solid fa-calendar-days"></i> Eventos</a></li>
+        <li><a href="historia.html"><i class="fa-solid fa-book-open"></i> História</a></li>
+        <li><a href="parcerias.html"><i class="fa-solid fa-handshake"></i> Parcerias</a></li>
+        <li><a href="feedback.html"><i class="fa-solid fa-comments"></i> Feedback</a></li>
+         <li><a href="login.html"><i class="fa-solid fa-comments"></i>Login</a></li>
+      </ul>
+      <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+  </header>
+
+  <section class="banner cursos-banner">
+    <div class="banner-text">
+  <h1>Cursos & Professores</h1>
+      <p>Conheça nossos programas e quem vai te ensinar.</p>
+    </div>
+  </section>
+
+  <section class="cursos">
+     <center><h2><i class="fa-solid fa-chalkboard-user"></i> Nossos Cursos</h2></center> 
+    <div class="cursos-container">
+      <div class="curso-card">
+        <i class="fa-solid fa-child curso-icon"></i>
+        <h3>Curso Infantil</h3>
+        <p>Para crianças de 4 a 12 anos com foco em disciplina, respeito e fundamentos básicos.</p>
+      </div>
+      <div class="curso-card">
+        <i class="fa-solid fa-user-graduate curso-icon"></i>
+        <h3>Curso Juvenil</h3>
+        <p>De 13 a 17 anos, desenvolvendo habilidades técnicas e espírito competitivo.</p>
+      </div>
+      <div class="curso-card">
+        <i class="fa-solid fa-dumbbell curso-icon"></i>
+        <h3>Curso Adulto</h3>
+        <p>Treinos avançados, condicionamento físico e preparação para campeonatos.</p>
+      </div>
+      <div class="curso-card">
+        <i class="fa-solid fa-venus curso-icon"></i>
+        <h3>Curso Feminino</h3>
+        <p>Autodefesa e técnicas adaptadas, ambiente motivador e seguro.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="professores">
+   <center><h2><i class="fa-solid fa-users"></i> Nossos Professores</h2></center> 
+    <div class="professores-container">
+      <div class="professor-card">
+        <img src="https://via.placeholder.com/250x200" alt="Professor João">
+        <h3>João Silva</h3>
+        <p>Faixa preta | 5x Campeão Mundial</p>
+      </div>
+      <div class="professor-card">
+        <img src="https://via.placeholder.com/250x200" alt="Professora Maria">
+        <h3>Maria Souza</h3>
+        <p>Faixa preta | Especialista em Jiu-Jitsu No-Gi</p>
+      </div>
+      <div class="professor-card">
+        <img src="https://via.placeholder.com/250x200" alt="Professor Lucas">
+        <h3>Lucas Costa</h3>
+        <p>Faixa roxa | Experiência internacional</p>
+      </div>
+      <div class="professor-card">
+        <img src="https://via.placeholder.com/250x200" alt="Professora Ana">
+        <h3>Ana Lima</h3>
+        <p>Faixa preta | Autodefesa e Jiu-Jitsu Feminino</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BJJ CWB | Desenvolvido com 🥋</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      menuToggle.classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>
